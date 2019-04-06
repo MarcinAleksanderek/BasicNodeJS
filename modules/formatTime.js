@@ -1,3 +1,5 @@
+var colors = require('colors');
+
 function formatTime (secs) {
 	var hrs = (secs/3600).toFixed(0);
 	var mins = ((secs%3600)/60).toFixed(0);
@@ -19,7 +21,7 @@ function formatTime (secs) {
 	}
 	else { seconds = '';}
 
-	console.log('Uptime: ' + hrs + mins + seconds);
+	console.log(colors.green('Uptime: ') + hrs + mins + seconds);
 }
 
 exports.format = formatTime;
